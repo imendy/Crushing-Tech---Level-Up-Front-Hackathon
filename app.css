@@ -30,6 +30,7 @@ body {
   background: var(--main-background-color);
   overflow: hidden;
   margin: 0;
+  height: 100%;
 }
 
 .step-text {
