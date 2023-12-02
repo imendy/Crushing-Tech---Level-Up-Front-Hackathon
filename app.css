@@ -30,9 +30,7 @@ body {
   background: var(--main-background-color);
   overflow: hidden;
   margin: 0;
-   height: 100vh;  
-    overflow: auto;
-    overflow-x: hidden;
+  
 }
 
 .step-text {
@@ -61,6 +59,7 @@ body {
   display: flex;
   align-items: center;
   padding: 10px;
+  margin-left: 3.5rem;
 }
 
 .logo img {
@@ -608,6 +607,9 @@ initials:focus {
   background: var(--White, #fff);
   box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.05);
   /* height: 300px;  */
+ 
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .onboarding-header {
@@ -735,7 +737,7 @@ initials:focus {
 .innerText {
   color: var(--font-mid-2, #616161);
 
-  font-size: 13px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 140%;
@@ -923,7 +925,7 @@ initials:focus {
 
 .shopping-item-label {
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
