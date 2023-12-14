@@ -1,487 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./app.css">
-    <title>Shopify Admin</title>
-</head>
-<body>
-   <header class="header">  
-     <nav class="navbar">
-        <div class="logo">
-            <img class="desktop__logo" src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg" alt="Desktop Logo">
-            <img class="mobile__logo" src="https://crushingit.tech/hackathon-assets/shopify-icon.svg" alt="Mobile Logo">
-        </div>
-        <div class="search__input__container">
-            <div class="search__bar">
-             
-                 <div class="search__icon">
-                  <img class="search__img" src="https://crushingit.tech/hackathon-assets/icon-search.svg" alt="Search">
-                 </div>
-             
-                <input type="text" id="searchInput" placeholder="Search">
-
-            </div>
-        </div>
-        <div class="notification__bar">
-        <button class="notifications" role="button">
-            <img src="https://crushingit.tech/hackathon-assets/icon-bell.svg" alt="Notifications" id="notificationBell" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
-         <div class="notification-dropdown" id="notificationDropdown" aria-hidden="true">
-            <div class="dropdown-header">
-                <p class="dropdown-title">Alerts</p>
-                <div class="icons-container">
-                   <div class="sort-icon">
-    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 1C0 0.585786 0.335786 0.25 0.75 0.25H13.25C13.6642 0.25 14 0.585786 14 1C14 1.41421 13.6642 1.75 13.25 1.75H0.75C0.335786 1.75 0 1.41421 0 1Z" fill="#616161"/>
-        <path d="M3.75 9C3.75 8.58579 4.08579 8.25 4.5 8.25H9.5C9.91421 8.25 10.25 8.58579 10.25 9C10.25 9.41421 9.91421 9.75 9.5 9.75H4.5C4.08579 9.75 3.75 9.41421 3.75 9Z" fill="#616161"/>
-        <path d="M2.5 4.25C2.08579 4.25 1.75 4.58579 1.75 5C1.75 5.41421 2.08579 5.75 2.5 5.75H11.5C11.9142 5.75 12.25 5.41421 12.25 5C12.25 4.58579 11.9142 4.25 11.5 4.25H2.5Z" fill="#616161"/>
-    </svg>
-</div>
-
-<div class="circle-icon">
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.2803 9.03033C13.5732 8.73744 13.5732 8.26256 13.2803 7.96967C12.9874 7.67678 12.5126 7.67678 12.2197 7.96967L9.25 10.9393L8.03033 9.71967C7.73744 9.42678 7.26256 9.42678 6.96967 9.71967C6.67678 10.0126 6.67678 10.4874 6.96967 10.7803L8.71967 12.5303C9.01256 12.8232 9.48744 12.8232 9.78033 12.5303L13.2803 9.03033Z" fill="#616161"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.5 10C15.5 13.0376 13.0376 15.5 10 15.5C6.96243 15.5 4.5 13.0376 4.5 10C4.5 6.96243 6.96243 4.5 10 4.5C13.0376 4.5 15.5 6.96243 15.5 10Z" fill="#616161"/>
-    </svg>
-</div>
-
-            </div>
-           
-        </div>
-         <p class="no-notifications">Alerts about your store and account will show here</p>
-    </div>
-</button>
-      
- <div class="brand" id="brand" tabindex="0" role="button">
-    <button class="customer__name" id="menuButton" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">Davii Collections</button>
-    <span class="initials" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">DC</span>
-    <div class="menu" id="menu" role="menu" aria-hidden="true">
-        <ul role="menu">
-            <li class="menu__item ">
-                <button role="menuitem" class="menuitem_button">
-                    <a href="https://admin.shopify.com">
-                        <div class="first__menu__item">
-                            <span class="initials__two">DC</span>
-                            <span class="menu__name">Davii Collections</span>
-                        </div>
-                    </a>
-                </button>
-                <span class="right-icon">
-                    <svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.3332 1L3.99984 8.33333L0.666504 5" stroke="#303030" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </span>
-            </li>
-            <li class="menu__item3">
-                <button role="menuitem" class="menuitem_button">
-                    <a href="https://admin.shopify.com">
-                        <span class="menu__name">Help Center</span>
-                    </a>
-                </button>
-            </li>
-            <hr>
-            <li class="menu__item4">
-                <button role="menuitem" class="menuitem_button">
-                    <a href="https://admin.shopify.com">
-                        <span class="menu__name">Changelog</span>
-                    </a>
-                </button>
-            </li>
-            <li class="menu__item5">
-    <button role="menuitem" class="menuitem_button">
-        <a href="https://admin.shopify.com">
-            <span class="menu__name">Community forums</span>
-        </a>
-    </button>
-</li>
-<li class="menu__item6">
-    <button role="menuitem" class="menuitem_button">
-        <a href="https://admin.shopify.com">
-            <span class="menu__name">Hire a Shopify Partner</span>
-        </a>
-    </button>
-</li>
-<li class="menu__item7">
-    <button role="menuitem" class="menuitem_button">
-        <a href="https://admin.shopify.com">
-            <span class="menu__name">Keyboard shortcuts</span>
-        </a>
-    </button>
-</li>
-<hr>
-<li class="menu__item8">
-    <button role="menuitem" class="menuitem_button">
-        <a href="https://admin.shopify.com">
-            <span class="menu__name" id="name">David Micheal</span>
-            <br>
-            <span class="email__text">davidmicheal@gmail.com</span>
-        </a>
-    </button>
-</li>
-<li class="menu__item9">
-    <button role="menuitem" class="menuitem_button">
-        <a href="https://admin.shopify.com">
-            <span class="menu__name">Manage account</span>
-        </a>
-    </button>
-</li>
-<li class="menu__item10">
-    <button role="menuitem" class="menuitem_button">
-        <a href="https://admin.shopify.com">
-            <span class="menu__name">Log out</span>
-        </a>
-    </button>
-</li>
-        </ul>
-    </div>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Setting up your shopify store, Use this personalized guide to get your store up and running.">
+    <meta name = "theme-color" content = "#1A1A1A">
+    <meta name = "msapplication-navbutton-color" content = "#1A1A1A">
+    <link rel="icon" type="image/x-icon" href="https://cdn.freebiesupply.com/logos/large/2x/shopify-logo-png-transparent.png">
 
 
+    <title>Shopify Dashboard - Hackathon Challenge 2023</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./app.css" />
 
+  </head>
+  <body>
 
-    </nav>
-   </header>
+    <span class="sr-only" aria-live="polite" id="reader-polite"></span>
+    <span class="sr-only" aria-live="assertive" id="reader-assertive"></span>
 
-    <!-- Promo Section -->
-   <section class="promo-section" id="trialCallout">
-        <div class="promo">
-            <div class="promo-content">
-                <p class="promo-text">Extend your trial for $1/month for 3 months on select plans</p>
-                <div class="plan__button__mobile">
-                    <a href="#">
-                         <button class="select-plan-button">Select a plan</button>
-                    </a>
-                </div>
-            </div>
-            <div class="plan__button__icon">
-                <div class="plan__button__desktop">
-                    <a href="#">
-                         <button class="select-plan-button">Select a plan</button>
-                    </a>
-                </div>
-             <div class="cancel-icon" onclick="dismissTrialCallout()" aria-label="Dismiss Trial Callout">
-                <!-- Your SVG icon code goes here -->
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.9697 15.0303C14.2626 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2626 15.0303 13.9697L11.0607 10L15.0303 6.03033C15.3232 5.73744 15.3232 5.26256 15.0303 4.96967C14.7374 4.67678 14.2626 4.67678 13.9697 4.96967L10 8.93934L6.03033 4.96967C5.73744 4.67678 5.26256 4.67678 4.96967 4.96967C4.67678 5.26256 4.67678 5.73744 4.96967 6.03033L8.93934 10L4.96967 13.9697C4.67678 14.2626 4.67678 14.7374 4.96967 15.0303C5.26256 15.3232 5.73744 15.3232 6.03033 15.0303L10 11.0607L13.9697 15.0303Z" fill="#E3E3E3"/>
-                </svg>
-                <span class="visually-hidden">Dismiss Trial Callout</span>
-            </div>
-            </div>
-        </div>
-    </section>
+    <!-- Header Section -->
+    <header>
+    <!-- Logo Start -->
+      <a target="_blank" href="https://www.shopify.com/" class="brand-logo" aria-label="Go to shopify homepage" >
+        <!-- Logo  full -->
+        <svg aria-hidden="true" class="full-logo" fill="none" height="30" viewBox="0 0 105 30" width="105" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="m36.2171 16.6517c-.8931-.4953-1.3631-.8962-1.3631-1.4622 0-.7311.6345-1.1792 1.6452-1.1792 1.1751 0 2.2092.4953 2.2092.4953l.8226-2.5235s-.7521-.5896-2.9848-.5896c-3.1024 0-5.2646 1.7924-5.2646 4.2922 0 1.4151 1.0106 2.4999 2.3502 3.2782 1.0812.6132 1.4572 1.0612 1.4572 1.698 0 .6839-.5406 1.2264-1.5512 1.2264-1.5041 0-2.9143-.7783-2.9143-.7783l-.8696 2.5235s1.3162.8725 3.5019.8725c3.1963 0 5.4761-1.5801 5.4761-4.4101.047-1.5565-1.1281-2.6414-2.5148-3.4432z"/><path d="m48.9559 11.3453c-1.5747 0-2.7968.7547-3.7604 1.8867l-.047-.0236 1.3631-7.1694h-3.5723l-3.4549 18.2302h3.5489l1.1751-6.2261c.47-2.3584 1.6687-3.797 2.7968-3.797.7991 0 1.1046.5425 1.1046 1.3207 0 .4953-.047 1.0849-.1645 1.5801l-1.3396 7.1459h3.5489l1.3866-7.3581c.1645-.7783.2585-1.6981.2585-2.3348.047-2.0518-.9871-3.2546-2.8438-3.2546z"/><path d="m59.884 11.3453c-4.2775 0-7.1213 3.8678-7.1213 8.1836 0 2.7593 1.6922 4.9997 4.8885 4.9997 4.207 0 7.0273-3.7734 7.0273-8.1835.0235-2.5706-1.4571-4.9998-4.7945-4.9998zm-1.7392 10.424c-1.2221 0-1.7157-1.0377-1.7157-2.3348 0-2.0517 1.0576-5.377 2.9848-5.377 1.2692 0 1.6687 1.0848 1.6687 2.1461 0 2.2168-1.0576 5.5657-2.9378 5.5657z"/><path d="m73.798 11.3453c-2.3972 0-3.7604 2.1226-3.7604 2.1226h-.047l.2115-1.9103h-3.1493c-.1645 1.2971-.4466 3.2545-.7286 4.7403l-2.4678 13.0182h3.5489l.9871-5.2827h.0706s.7285.4716 2.0917.4716c4.1834 0 6.9097-4.2922 6.9097-8.6316 0-2.3819-1.0576-4.5281-3.6664-4.5281zm-3.3843 10.4948c-.9166 0-1.4572-.5189-1.4572-.5189l.5876-3.3253c.423-2.2168 1.5746-3.7026 2.7968-3.7026 1.0811 0 1.4101 1.0141 1.4101 1.9574 0 2.2877-1.3631 5.5894-3.3373 5.5894z"/><path d="m82.5408 6.22766c-1.1281 0-2.0447.89618-2.0447 2.07537 0 1.06126.6581 1.79237 1.6687 1.79237h.047c1.1046 0 2.0682-.75469 2.0917-2.07538.0235-1.06126-.6816-1.79236-1.7627-1.79236z"/><path d="m77.5586 24.2692h3.5724l2.4208-12.6408h-3.5959z"/><path d="m92.5759 11.6047h-2.4678l.1176-.5895c.2115-1.22639.9166-2.31124 2.1152-2.31124.6346 0 1.1281.18867 1.1281.18867l.7051-2.78288s-.6111-.30659-1.9272-.30659c-1.2692 0-2.5148.35376-3.4784 1.17919-1.2221 1.03768-1.7862 2.52345-2.0682 4.03285l-.0941.5895h-1.6451l-.5171 2.6886h1.6452l-1.8802 9.9759h3.5489l1.8802-9.9759h2.4443z"/><path d="m101.131 11.6284s-2.2323 5.6129-3.2194 8.6788h-.047c-.0705-.9906-.8696-8.6788-.8696-8.6788h-3.7369l2.1387 11.6031c.047.2595.0235.4245-.0705.5896-.4231.8019-1.1046 1.5801-1.9272 2.1461-.6581.4953-1.4102.8019-1.9977 1.0141l.9871 3.0188c.7286-.1651 2.2092-.7547 3.4784-1.9339 1.6216-1.533 3.1258-3.8677 4.6531-7.0751l4.348-9.3627z"/><path d="m17.5094 3.42124s-.329.09434-.8696.25942c-.094-.30659-.235-.66034-.423-1.03768-.6111-1.17919-1.5277-1.815945-2.6088-1.815945-.0705 0-.141 0-.235.023584-.0235-.047168-.0705-.070751-.094-.117919-.4701-.518841-1.0812-.7546779-1.8097-.73109423-1.4102.04716743-2.82034 1.06126423-3.94847 2.87721423-.79909 1.27352-1.41015 2.87721-1.57467 4.12714-1.62168.49526-2.74981.84902-2.77331.8726-.82259.25942-.84609.283-.9401 1.06127-.07051.58959-2.23275 17.19247-2.23275 17.19247l17.768 3.0895v-25.82414c-.1411 0-.2116.02358-.2586.02358zm-4.1129 1.27352c-.9401.283-1.9742.61318-2.9849.91976.2821-1.10843.8461-2.21686 1.5042-2.94796.2585-.25942.6111-.56601 1.0106-.75468.3996.84902.4936 2.00462.4701 2.78288zm-1.9272-3.726223c.329 0 .611.070753.8461.212253-.3761.18867-.7521.49526-1.1047.84901-.8931.96693-1.57464 2.47629-1.85667 3.9149-.84609.25942-1.69218.51884-2.46777.75467.51706-2.26403 2.42077-5.68367 4.58304-5.730833zm-2.72633 12.971063c.09401 1.5093 4.06593 1.8395 4.30093 5.4006.1646 2.8065-1.4806 4.7168-3.85438 4.8583-2.86732.1886-4.442-1.5094-4.442-1.5094l.61107-2.5942s1.57468 1.2028 2.84382 1.1084c.82259-.0471 1.12812-.7311 1.10462-1.2027-.11751-1.9811-3.36087-1.8631-3.5724-5.1177-.18802-2.7357 1.59818-5.49499 5.54657-5.75441 1.5277-.09433 2.3033.28301 2.3033.28301l-.8931 3.396s-1.0106-.4716-2.2092-.3773c-1.73923.1179-1.76274 1.2264-1.73923 1.5094zm5.59363-9.52784c0-.70751-.094-1.72161-.4231-2.57063 1.0812.21226 1.5982 1.41503 1.8332 2.14612-.423.11792-.8931.25942-1.4101.42451z"/><path d="m18.3086 29.1747 7.3798-1.8395s-3.1728-21.53194-3.1963-21.67344c-.0235-.14151-.1411-.23584-.2586-.23584s-2.1857-.04717-2.1857-.04717-1.2692-1.22635-1.7392-1.69802z"/></g></svg>
 
-    <!-- Setup/Onboarding Section -->
-<section class="onboarding-section" id="setupGuide">
-
-
-    <div class="onboarding-header">
-        <div class="text-and-progress">
-            <h2 class="setup-title">Setup guide</h2>
-            <p class="guide-text">Use this personalized guide to get your store up and running</p>
-            <div class="progress-bar">
-                <p class="progress-text" id="progressText">0/5 completed</p>
-                <div class="outer-bar" id="progressOuterBar">
-                    <div class="inner-bar" id="progressInnerBar"></div>
-                </div>
-            </div>
-        </div>
-        <div class="arrow-icon" id="arrowIcon" onclick="toggleOnboardingCard()">
-            <svg class="arrow-up" width="41" height="40" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#fff"/>
+        <!-- Logo Icon -->
+        <svg aria-hidden="true" class="icon-logo" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Shopify.com svg">
+            <g id="Group">
+            <g id="Group_2">
+            <path id="Vector" d="M21.2105 3.80402C21.2105 3.80402 20.8505 3.90683 20.259 4.08675C20.1561 3.75261 20.0018 3.36707 19.7961 2.95583C19.1274 1.67069 18.1245 0.976712 16.9415 0.976712C16.8644 0.976712 16.7872 0.976712 16.6843 1.00241C16.6586 0.951009 16.6072 0.925306 16.5815 0.8739C16.0671 0.308439 15.3985 0.0514104 14.6013 0.0771132C13.0583 0.128519 11.5152 1.23374 10.2808 3.21286C9.40646 4.60081 8.73782 6.3486 8.55781 7.71085C6.78334 8.25061 5.54893 8.63615 5.52321 8.66185C4.62312 8.94458 4.59741 8.97029 4.49454 9.81848C4.34024 10.461 2 28.5815 2 28.5815L21.442 31.9486V3.75262C21.3391 3.77832 21.2619 3.77832 21.2105 3.80402ZM16.7101 5.19197C15.6814 5.50041 14.5498 5.86025 13.444 6.19438C13.7526 4.98635 14.3698 3.77832 15.0899 2.98153C15.3728 2.6988 15.7585 2.36466 16.1957 2.15904C16.6329 3.08434 16.7358 4.34378 16.7101 5.19197ZM14.627 1.10523C14.987 1.10523 15.2956 1.18233 15.5528 1.33655C15.1413 1.54217 14.7299 1.87631 14.3441 2.26185C13.3669 3.31567 12.6211 4.96065 12.3125 6.52852C11.3867 6.81125 10.4609 7.09398 9.6122 7.35101C10.1523 4.90924 12.2353 1.18233 14.627 1.10523ZM11.6181 15.2418C11.721 16.8868 16.0671 17.2466 16.3243 21.1277C16.5043 24.1863 14.7041 26.2683 12.1067 26.4225C8.96928 26.6281 7.24625 24.7775 7.24625 24.7775L7.91488 21.9502C7.91488 21.9502 9.63792 23.261 11.0266 23.1582C11.9267 23.1068 12.261 22.3615 12.2353 21.8474C12.1067 19.6884 8.55781 19.8169 8.32635 16.2699C8.12062 13.3141 10.0751 10.3068 14.3955 10.0241C16.0671 9.92129 16.9158 10.3325 16.9158 10.3325L15.9386 14.0337C15.9386 14.0337 14.8327 13.5197 13.5212 13.6225C11.6181 13.751 11.5924 14.959 11.6181 15.2418ZM17.7387 4.88354C17.7387 4.11245 17.6359 3.00723 17.2758 2.08193C18.4588 2.31326 19.0246 3.6241 19.2817 4.42089C18.8188 4.5494 18.3045 4.70362 17.7387 4.88354Z" fill="white"/>
+            <path id="Vector_2" d="M22.085 31.8458L30.1601 29.841C30.1601 29.841 26.6883 6.3743 26.6626 6.22009C26.6369 6.06587 26.5083 5.96306 26.3797 5.96306C26.2511 5.96306 23.988 5.91165 23.988 5.91165C23.988 5.91165 22.5993 4.57511 22.085 4.06105V31.8458Z" fill="white"/>
+            </g>
+            </g>
+            </g>
+        </svg>
+      </a>
+    <!-- Logo End -->
+  
+    <!-- Search Start -->
+      <div class="search-area">
+        <label class="search-icon" for="search_input">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8226 13.3833C11.8996 14.0841 10.7484 14.5 9.5 14.5C6.46243 14.5 4 12.0376 4 9C4 5.96243 6.46243 3.5 9.5 3.5C12.5376 3.5 15 5.96243 15 9C15 10.2484 14.5841 11.3996 13.8833 12.3226L16.7803 15.2197C17.0732 15.5126 17.0732 15.9874 16.7803 16.2803C16.4874 16.5732 16.0126 16.5732 15.7197 16.2803L12.8226 13.3833ZM13.5 9C13.5 11.2091 11.7091 13 9.5 13C7.29086 13 5.5 11.2091 5.5 9C5.5 6.79086 7.29086 5 9.5 5C11.7091 5 13.5 6.79086 13.5 9Z" fill="#B5B5B5"/>
             </svg>
-            <svg class="arrow-down" width="41" height="40" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z" fill="#fff"/>
+        </label>
+        <input type="text" placeholder="Search" id="search_input" aria-label="search Box input. Search shopify" >
+      </div>
+    <!-- Search Ends -->
+  
+    <!-- Other Start -->
+      <div class="extra">
+        <!-- Notification Button -->
+        <button class="notify-icon" aria-controls="notifications-list-container" id="notifications-toggle-btn" aria-haspopup="true" aria-expanded="false" aria-controls="notifications-list-container" aria-label="Toggle Notification list">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25203 14.4239L4.8061 14.1427C2.95144 13.9295 2.42542 11.4844 4.02838 10.5274L4.0933 10.4886C4.966 9.96761 5.50045 9.02609 5.50045 8.00969V7.5C5.50045 5.01472 7.51517 3 10.0005 3C12.4857 3 14.5005 5.01472 14.5005 7.5V8.00969C14.5005 9.02609 15.0349 9.96761 15.9076 10.4886L15.9725 10.5274C17.5755 11.4844 17.0495 13.9295 15.1948 14.1427L12.652 14.435V14.8C12.652 16.2912 11.4432 17.5 9.95203 17.5C8.46086 17.5 7.25203 16.2912 7.25203 14.8V14.4239ZM11.152 14.5H8.75203V14.8C8.75203 15.4627 9.28929 16 9.95203 16C10.6148 16 11.152 15.4627 11.152 14.8V14.5ZM8.00045 13H12.0005L15.0235 12.6525C15.453 12.6032 15.5748 12.0369 15.2036 11.8153L15.1387 11.7766C15.0591 11.7291 14.9815 11.6793 14.9057 11.6273C14.7506 11.521 14.6036 11.4055 14.4651 11.2818C14.4405 11.2598 14.4162 11.2377 14.3922 11.2152C13.5144 10.395 13.0005 9.23833 13.0005 8.00969V7.5C13.0005 5.84315 11.6573 4.5 10.0005 4.5C8.3436 4.5 7.00045 5.84315 7.00045 7.5V8.00969C7.00045 9.23833 6.48651 10.395 5.60871 11.2152C5.58469 11.2377 5.56039 11.2598 5.53583 11.2818C5.39734 11.4055 5.25029 11.521 5.09523 11.6273C5.01945 11.6793 4.94176 11.7291 4.86222 11.7766L4.79729 11.8153C4.4261 12.0369 4.5479 12.6032 4.97739 12.6525L8.00045 13Z" fill="#E3E3E3"/>
             </svg>
-        </div>
-    </div>
-   
-      
-<div class="onboarding-steps" id="onboardingSteps">
- 
-   <div class="item">
-    <div class="shopping-item" id="shoppingItem1">
-        <span id="shoping-item-checkbox-status" aria-live="polite"></span>
-         <button class="shopping-item-checkbox" id="shopping-item-checkbox-1" aria-label="mark as done">  <!-- dont forget aria-label -->
-            <svg class="not-completed-icon" id="not-completed-icon-1" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-            </svg>
+        </button>
 
-            <svg class="completed-icon hidden" id="completed-icon-1" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="#303030"></circle>
-                <path
-                  d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
-                  fill="#fff"
-                ></path>
-              </svg>
-
-
-              <svg class="loading-spinner-icon hidden" id="loading-spinner-icon-1" aria-hidden="true"
-              width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2" stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+        <!-- Notification Dropdown -->
+        <div  class="header-dropdown notifications" role="menu" aria-labelledby="notifications-toggle-btn"  id="notifications-list-container">
+            <div>
+                <div class="header">
+                    <!-- Header Content -->
+                    <p>Alerts</p>
+                    <div>
+                        <!-- Action Buttons -->
+                        <button aria-label="Mark all as read"  role="menuitem">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H16.25C16.6642 5.25 17 5.58579 17 6C17 6.41421 16.6642 6.75 16.25 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z" fill="#616161"/>
+                                <path d="M6.75 14C6.75 13.5858 7.08579 13.25 7.5 13.25H12.5C12.9142 13.25 13.25 13.5858 13.25 14C13.25 14.4142 12.9142 14.75 12.5 14.75H7.5C7.08579 14.75 6.75 14.4142 6.75 14Z" fill="#616161"/>
+                                <path d="M5.5 9.25C5.08579 9.25 4.75 9.58579 4.75 10C4.75 10.4142 5.08579 10.75 5.5 10.75H14.5C14.9142 10.75 15.25 10.4142 15.25 10C15.25 9.58579 14.9142 9.25 14.5 9.25H5.5Z" fill="#616161"/>
+                            </svg>
+                        </button>
+                        
+                        <button aria-label="Settings"  role="menuitem">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M13.2803 9.03033C13.5732 8.73744 13.5732 8.26256 13.2803 7.96967C12.9874 7.67678 12.5126 7.67678 12.2197 7.96967L9.25 10.9393L8.03033 9.71967C7.73744 9.42678 7.26256 9.42678 6.96967 9.71967C6.67678 10.0126 6.67678 10.4874 6.96967 10.7803L8.71967 12.5303C9.01256 12.8232 9.48744 12.8232 9.78033 12.5303L13.2803 9.03033Z" fill="#616161"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.5 10C15.5 13.0376 13.0376 15.5 10 15.5C6.96243 15.5 4.5 13.0376 4.5 10C4.5 6.96243 6.96243 4.5 10 4.5C13.0376 4.5 15.5 6.96243 15.5 10Z" fill="#616161"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
                 
-
-
-         </button>
-
-         <span class="shopping-item-label">
-            Customize your online store
-         </span>
-
+                <!-- Alert Content -->
+                <div class="alert">Alerts about your store and account will show here</div>
+            </div>
+        </div>
+  
+        <!-- Store Button -->
+        <button class="store-label" id="store-menu-toggle-btn" aria-haspopup="true" aria-expanded="false" aria-controls="store-menu-list-container" aria-label="Toggle store action links"><span aria-hidden="true">Davii Collections</span> <div aria-hidden="true" class="store-icon">DC</div></button>
         
-         
-    </div>
+        <!-- Shop Dropdown Menu -->
+        <nav class="header-dropdown store-nav" role="menu" aria-labelledby="store-menu-toggle-btn" id="store-menu-list-container">
+            <div>
+                <!-- Grouping sections in the dropdown -->
+                <div class="section">
+                    <div class="store">
+                        <div class="brand">
+                            <div class="logo">DC</div>
+                            <span>Davii Collections</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="#303030" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
 
-    <div class="onboarding-content" id="stepContent1">
-        <div class="content">
-            <div class="stepContentDiv step-one">
-                <h3 class="innerText">
-                    Choose a theme and add your logo, colors, and images to reflect your brand.
-                    <span>
-                        <button>Learn more</button>
-                    </span>
-                </h3>
-                
-                <button class="step-button">Customize theme</button>
-            </div>
+                    <a href="https://admin.shopify.com/" class="menu-link" role="menuitem" target="_blank">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.757 0H4.24302C3.85944 0 3.4971 0.17611 3.26012 0.477723L0.873943 3.51468C0.631688 3.823 0.5 4.20375 0.5 4.59586V5.25C0.5 6.31867 1.10958 7.24497 2 7.70015V12.25C2 13.2165 2.7835 14 3.75 14H11.25C12.2165 14 13 13.2165 13 12.25V7.70015C13.8904 7.24497 14.5 6.31867 14.5 5.25V4.76879C14.5 4.26465 14.3307 3.77511 14.0192 3.3787L11.7399 0.477723C11.5029 0.17611 11.1406 0 10.757 0ZM10.5 12.5H11.25C11.3881 12.5 11.5 12.3881 11.5 12.25V8C10.712 8 10.0014 7.66855 9.5 7.13747C8.99861 7.66855 8.28802 8 7.5 8C6.71199 8 6.00138 7.66856 5.5 7.13747C4.99862 7.66856 4.28801 8 3.5 8V12.25C3.5 12.3881 3.61193 12.5 3.75 12.5H7.5V10C7.5 9.44772 7.94772 9 8.5 9H9.5C10.0523 9 10.5 9.44771 10.5 10V12.5ZM3.5 6.5H3.25C2.55964 6.5 2 5.94036 2 5.25V4.59586C2 4.53985 2.01881 4.48545 2.05342 4.44141L4.36453 1.5H10.6355L12.8397 4.30543C12.9436 4.43757 13 4.60075 13 4.76879V5.25C13 5.94036 12.4404 6.5 11.75 6.5H11.5C10.8096 6.5 10.25 5.94036 10.25 5.25V4.75C10.25 4.33579 9.91421 4 9.5 4C9.08579 4 8.75 4.33579 8.75 4.75V5.25C8.75 5.94036 8.19036 6.5 7.5 6.5C6.80964 6.5 6.25 5.94036 6.25 5.25V4.75C6.25 4.33579 5.91421 4 5.5 4C5.08579 4 4.75 4.33579 4.75 4.75V5.25C4.75 5.94036 4.19036 6.5 3.5 6.5Z" fill="#303030"/>
+                            </svg>
+                        </div>
+                        <span class="label">All stores</span>
+                    </a>
+
+                </div>
+
+                <div class="line"></div>
             
-           <div>
-             <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="" />
-           </div>
-        </div>
-    </div>
-   </div>
+                <div class="section">
+                    <a href="https://admin.shopify.com/" target="_blank" class="menu-link" role="menuitem"><span class="label">Help Center</span></a>
+                    <a href="https://admin.shopify.com/" target="_blank" class="menu-link" role="menuitem"><span class="label">Changelog</span></a>
+                    <a href="https://admin.shopify.com/" target="_blank" class="menu-link" role="menuitem"><span class="label">Community forums</span></a>
+                    <a href="https://admin.shopify.com/" target="_blank" class="menu-link" role="menuitem"><span class="label">Hire a Shopify Partner</span></a>
+                    <a href="https://admin.shopify.com/" target="_blank" class="menu-link" role="menuitem"><span class="label">Keyboard shortcuts</span></a>
+                </div>
+
+                <div class="line"></div>
+
+                <div class="section">
+                    <a href="https://admin.shopify.com/" target="_blank" class="menu-link two-rows" role="menuitem"><span>David Micheal</span><span>davidmicheal@gmail.com</span></a>
+                    <a href="https://admin.shopify.com/" target="_blank" class="menu-link" role="menuitem"><span class="label">Manage account</span></a>
+                    <a href="https://admin.shopify.com/" target="_blank" class="menu-link" role="menuitem"><span class="label">Log out</span></a>
+                </div>
+            </div>
+        </nav>
+      </div>
+
+    <!-- Other Ends -->
+    </header>
+
+    
   
 
-      <div class="shopping-item" id="shoppingItem2">
-
-        <span id="shoping-item-checkbox-status" aria-live="polite"></span>
-         <button class="shopping-item-checkbox" id="shopping-item-checkbox-2" aria-label="mark as done">  <!-- dont forget aria-label -->
-            <svg class="not-completed-icon" id="not-completed-icon-2" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-            </svg>
-
-            <svg class="completed-icon hidden" id="completed-icon-2" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="#303030"></circle>
-                <path
-                  d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
-                  fill="#fff"
-                ></path>
-              </svg>
-
-
-              <svg class="loading-spinner-icon hidden" id="loading-spinner-icon-2" aria-hidden="true"
-              width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2" stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
-
-
-         </button>
-
-      
-        <span class="shopping-item-label">
-            Add your first product
-         </span>
-
-         
-       
-    
-      </div>
-      <div class="onboarding-content" id="stepContent2">
-        <div class="content">
-            <div class="stepContentDiv step-two">
-                <h3 class="innerText">
-                    Write a description, add photos, and set pricing for the products you plan to sell.
-                    <span>
-                        <button>Learn more</button>
-                    </span>
-                </h3>
-               
-                   <div class="step-button-duo">
-                    <button class="step-button-1">
-                        Add product 
+    <!-- Content Section -->
+    <main class="major-content">
+        <!-- Information Card -->
+        <div class="information" id="information-card" >
+            <div class="information-content" role="dialog" aria-labelledby="card-heading" aria-describedby="card-description">
+                <!-- Heading for Screen Readers -->
+                <h2 class="sr-only" id="card-heading">Trial Information</h2>
+                <!-- Information Message -->
+                <p id="card-description">Extend your trial for $1/month for 3 months on select plans.</p>
+                <div class="information-actions">
+                    <!-- Link to Select a Plan -->
+                    <a href="https://www.shopify.com/pricing" target="_blank" class="btn-light">Select a plan</a>
+                    <!-- Button to Close the Information Card -->
+                    <button class="icon-close card-close" aria-label="Close trial extension information card" for="information-card" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                            <path d="M13.9697 15.0303C14.2626 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2626 15.0303 13.9697L11.0607 10L15.0303 6.03033C15.3232 5.73744 15.3232 5.26256 15.0303 4.96967C14.7374 4.67678 14.2626 4.67678 13.9697 4.96967L10 8.93934L6.03033 4.96967C5.73744 4.67678 5.26256 4.67678 4.96967 4.96967C4.67678 5.26256 4.67678 5.73744 4.96967 6.03033L8.93934 10L4.96967 13.9697C4.67678 14.2626 4.67678 14.7374 4.96967 15.0303C5.26256 15.3232 5.73744 15.3232 6.03033 15.0303L10 11.0607L13.9697 15.0303Z" fill="#E3E3E3"/>
+                        </svg>
                     </button>
-                
-                    <button class="step-button-2">
-                        Import product 
-                    </button>
-                   </div>
-                
                 </div>
-           
-            <div>
-                <img src="https://crushingit.tech/hackathon-assets/product.png" alt="" />
-              </div>
+            </div>
         </div>
-        
-    </div>
-     
-      <div class="shopping-item" id="shoppingItem3">
-        <span id="shoping-item-checkbox-status" aria-live="polite"></span>
-         <button class="shopping-item-checkbox" id="shopping-item-checkbox-3" aria-label="mark as done">  <!-- dont forget aria-label -->
-            <svg class="not-completed-icon" id="not-completed-icon-3" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-            </svg>
+  
 
-            <svg class="completed-icon hidden" id="completed-icon-3" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="#303030"></circle>
-                <path
-                  d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
-                  fill="#fff"
-                ></path>
-              </svg>
+        <!-- Store Configuration Guide -->
+        <div class="store-config " id="store-config-guide" >
 
-
-              <svg class="loading-spinner-icon hidden" id="loading-spinner-icon-3" aria-hidden="true"
-              width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2" stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
-
-
-         </button>
-
-         <span class="shopping-item-label">
-            Add a custom domain
-         </span>
-      </div>
-
-      <div class="onboarding-content" id="stepContent3">
-        <div class="content">
-            <div class="stepContentDiv step-three">    
-                <h3 class="innerText">
-                    Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store.
-                <span>
-                    <button>Learn more</button>
-                </span>
-            </h3>
-           
-            <button class="step-button">
-                    Add domain
-                </button>
-    
-              
-           </div>
+            <div class="overview">
                 <div>
-                    <img src="https://crushingit.tech/hackathon-assets/website.png" alt="" />
-                  </div>
-        </div>
-        
-        
-       
-    </div>
-
-      <div class="shopping-item" id="shoppingItem4">
-        <span id="shoping-item-checkbox-status" aria-live="polite"></span>
-         <button class="shopping-item-checkbox" id="shopping-item-checkbox-4" aria-label="mark as done">  <!-- dont forget aria-label -->
-            <svg class="not-completed-icon" id="not-completed-icon-4" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-            </svg>
-
-            <svg class="completed-icon hidden" id="completed-icon-4" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="#303030"></circle>
-                <path
-                  d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
-                  fill="#fff"
-                ></path>
-              </svg>
-
-
-              <svg class="loading-spinner-icon hidden" id="loading-spinner-icon-4" aria-hidden="true"
-              width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2" stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
-
-
-         </button>
-
-         <span class="shopping-item-label">
-            Name your store
-         </span>
-      </div>
-
-
-      <div class="onboarding-content" id="stepContent4">
-
-        <div class="content">
-            <div class="stepContentDiv step-four">
-                <h3 class="innerText">
-                    Your temporary store name is currently Davii collections. the store name appears in your admin and your online store.
-                    <span>
-                        <button>Learn more</button>
-                    </span>
-                </h3>
-                <button class="step-button">
-                    Name store
-                 </button>
+                    <!-- Guide Title and Description -->
+                    <div class="guide-heading">
+                        <h2 id="setup-heading">Setup guide</h2>
+                        <p id="setup-description">Use this personalized guide to get your store up and running.</p>
+                    </div>
+            
+                    <!-- Progress Indicator -->
+                    <div class="progress-tracker" aria-label="Progress Tracker">
+                        <span><span id="completed-steps">0</span> / <span id="total-steps">0</span> completed</span>
+                        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div class="progress-indicator" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Toggle Button for Store Config Guide -->
+                <button id="toggle-store-config" aria-label="Toggle Store Setup Guide">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71967 8.46967C6.01256 8.17678 6.48744 8.17678 6.78033 8.46967L10.25 11.9393L13.7197 8.46967C14.0126 8.17678 14.4874 8.17678 14.7803 8.46967C15.0732 8.76256 15.0732 9.23744 14.7803 9.53033L10.7803 13.5303C10.4874 13.8232 10.0126 13.8232 9.71967 13.5303L5.71967 9.53033C5.42678 9.23744 5.42678 8.76256 5.71967 8.46967Z" fill="#4A4A4A"/>
+                    </svg>
+                </button>
             </div>
-            
-            <div>
-                <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="" />
-              </div>
-        </div>
-    </div>
-
-      <div class="shopping-item" id="shoppingItem5">
-        <span id="shoping-item-checkbox-status" aria-live="polite"></span>
-         <button class="shopping-item-checkbox" id="shopping-item-checkbox-5" aria-label="mark as done">  <!-- dont forget aria-label -->
-            <svg class="not-completed-icon" id="not-completed-icon-5" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" stroke="#8A8A8A" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 5"/>
-            </svg>
-
-            <svg class="completed-icon hidden" id="completed-icon-5" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="12" cy="12" r="10" fill="#303030"></circle>
-                <path
-                  d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
-                  fill="#fff"
-                ></path>
-              </svg>
-
-
-              <svg class="loading-spinner-icon hidden" id="loading-spinner-icon-5" aria-hidden="true"
-              width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.0004 12C22.0004 13.9778 21.4139 15.9112 20.3151 17.5557C19.2162 19.2002 17.6545 20.4819 15.8272 21.2388C13.9999 21.9957 11.9893 22.1937 10.0495 21.8079C8.10965 21.422 6.32782 20.4696 4.9293 19.0711C3.53077 17.6725 2.57837 15.8907 2.19251 13.9509C1.80666 12.0111 2.00469 10.0004 2.76157 8.17317C3.51845 6.3459 4.80017 4.78412 6.44466 3.6853C8.08916 2.58649 10.0226 2 12.0004 2" stroke="#1C181D" stroke-width="2.08333" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                
-
-
-         </button>
-
-         <span class="shopping-item-label">
-          
-            Set up a payment provider
-         </span>
-      </div>
-
-      
-    <div class="onboarding-content" id="stepContent5">
-        <div class="content">
-            <div class="stepContentDiv step-five">
-                <h3 class="innerText">
-                    Choose a payment provider to start accepting payment. You'll need to create an account with the payment provider and set it up with your Shopify store.
-                    <span>
-                        <button>Learn more</button>
-                    </span>
-                </h3>
-                <button class="step-button">
-                    Set up payment
-                 </button>
+    
+            <div class="config-container">
+                <div class="config-steps">
+                    <!-- Single Configuration Step -->
+                    <div class="config-step active">
+                        <div class="step-details">
+                            <div class="step-header">
+                                <!-- State Buttons -->
+                                <div class="btn-icon-holder">
+                                    <button class="step-state" role="checkbox" aria-checked="false" aria-label="Customize your online store" >
+                                        <div  aria-hidden="true" class="default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                                            <circle cx="16" cy="16" r="12" stroke="#BABABA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28" fill="none">
+                                        <path
+                                            d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                            stroke="#1C181D"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading-backwards"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 28 28" fill="none">
+                                        <path
+                                            d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                            stroke="#1C181D"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="selected"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" fill="#303030"></circle>
+                                        <path
+                                            d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+                                            fill="#fff"
+                                        ></path>
+                                        </svg></div>
+                                    </button>
+                                </div>
+                                <!-- Title of the Configuration Step -->
+                                <div class="btn-title-holder">
+                                    <button class="step-title" aria-label="Dropdown Customize your online store accordion" >Customize your online store</button>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <div>
+                                    <!-- Step Description -->
+                                    <p>Choose a theme and add your logo, colors and images to reflect your brand.  <a href="https://help.shopify.com/en/manual/online-store/themes/customizing-themes" target="_blank" aria-label="learn more about Customizing your online store">Learn more </a></p>
+                                    <div class="step-actions">
+                                        <!-- Action Button -->
+                                        <div class="btn-holder">
+                                             <button class="btn-dark">Customize theme</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-illustration">
+                                    <!-- Step Illustration -->
+                                    <img src="https://crushingit.tech/hackathon-assets/customise-store.png" alt="Customize Store Illustration">
+                                    <div class="fade-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Single Configuration Step -->
+                    <div class="config-step">
+                        <div class="step-details">
+                            <div class="step-header">
+                                <!-- State Buttons -->
+                                <div class="btn-icon-holder">
+                                    <button class="step-state" role="checkbox" aria-checked="false" aria-label="Add your first product">
+                                        <div aria-hidden="true" class="default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                                            <circle cx="16" cy="16" r="12" stroke="#BABABA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28" fill="none">
+                                            <path
+                                                d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                                stroke="#1C181D"
+                                                stroke-width="2.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading-backwards"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 28 28" fill="none">
+                                        <path
+                                            d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                            stroke="#1C181D"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        </svg></div>
+                                        <div aria-hidden="true" class="selected"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" fill="#303030"></circle>
+                                        <path
+                                            d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+                                            fill="#fff"
+                                        ></path>
+                                        </svg></div>
+                                    </button>
+                                </div>
+                                <!-- Title of the Configuration Step -->
+                                <div class="btn-title-holder">
+                                    <button class="step-title" aria-label="Dropdown Add your first product accordion">Add your first product</button>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <div>
+                                    <!-- Step Description -->
+                                    <p>Write a description, add photos, and set pricing for the products you plan to sell. <a href="https://help.shopify.com/en/manual/products/add-update-products" target="_blank" aria-label="learn more about Adding your first product">Learn more </a></p>
+                                    <div class="step-actions">
+                                        <!-- Action Button -->
+                                        <div class="btn-holder"><button class="btn-dark">Add product</button></div>
+                                        <div class="btn-holder"><button class="btn-flat">Import product</button></div>
+                                    </div>
+                                </div>
+                                <div class="step-illustration">
+                                    <!-- Step Illustration -->
+                                    <img src="https://crushingit.tech/hackathon-assets/product.png" alt="Add your first product Illustration">
+                                    <div class="fade-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Single Configuration Step -->
+                    <div class="config-step">
+                        <div class="step-details">
+                            <div class="step-header">
+                                <!-- State Buttons -->
+                                <div class="btn-icon-holder">
+                                    <button class="step-state" role="checkbox" aria-checked="false" aria-label="Toggle Add a custom domain">
+                                        <div aria-hidden="true" class="default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                                            <circle cx="16" cy="16" r="12" stroke="#BABABA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28" fill="none">
+                                            <path
+                                                d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                                stroke="#1C181D"
+                                                stroke-width="2.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading-backwards"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 28 28" fill="none">
+                                        <path
+                                            d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                            stroke="#1C181D"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        </svg></div>
+                                        <div aria-hidden="true" class="selected"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" fill="#303030"></circle>
+                                        <path
+                                            d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+                                            fill="#fff"
+                                        ></path>
+                                        </svg></div>
+                                    </button>
+                                </div>
+                                <!-- Title of the Configuration Step -->
+                                <div class="btn-title-holder">
+                                    <button class="step-title" aria-label="Dropdown Add a custom domain accordion">Add a custom domain</button>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <div>
+                                    <!-- Step Description -->
+                                    <p>Your current domain is 222219.myshopify.com but you can add a custom domain to help customers find your online store.  <a href="https://help.shopify.com/en/manual/domains" target="_blank" aria-label="learn more about setting up a custom domain.">Learn more </a></p>
+                                    <div class="step-actions">
+                                        <!-- Action Button -->
+                                        <div class="btn-holder">
+                                            <button class="btn-dark">Add domain</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-illustration">
+                                    <!-- Step Illustration -->
+                                    <img src="https://crushingit.tech/hackathon-assets/website.png" alt="Add a custom domain Illustration">
+                                    <div class="fade-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Single Configuration Step -->
+                    <div class="config-step ">
+                        <div class="step-details">
+                            <div class="step-header">
+                                <!-- State Buttons -->
+                                <div class="btn-icon-holder">
+                                    <button class="step-state" role="checkbox" aria-checked="false" aria-label="Toggle Name your store">
+                                        <div aria-hidden="true" class="default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                                            <circle cx="16" cy="16" r="12" stroke="#BABABA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28" fill="none">
+                                            <path
+                                                d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                                stroke="#1C181D"
+                                                stroke-width="2.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading-backwards"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 28 28" fill="none">
+                                        <path
+                                            d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                            stroke="#1C181D"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        </svg></div>
+                                        <div aria-hidden="true" class="selected"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" fill="#303030"></circle>
+                                        <path
+                                            d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+                                            fill="#fff"
+                                        ></path>
+                                        </svg></div>
+                                    </button>
+                                </div>
+                                <!-- Title of the Configuration Step -->
+                                <div class="btn-title-holder">
+                                    <button class="step-title" aria-label="Dropdown Name your store accordion">Name your store</button>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                               <div>
+                                 <!-- Step Description -->
+                                 <p>Your temporary store name is currently Davii collections. The store name appears in your admin and your online store. <a href="https://help.shopify.com/manual/intro-to-shopify/initial-setup/setup-business-settings#set-or-change-your-online-store-name-and-legal-business-name" aria-label="learn more about setting up your store name." target="_blank">Learn more </a></p>
+                                 <div class="step-actions">
+                                     <!-- Action Button -->
+                                     <div class="btn-holder">
+                                         <button class="btn-dark">Name store</button>
+                                     </div>
+                                 </div>
+                               </div>
+                            </div>
+                            <div class="step-illustration">
+                                <!-- Step Illustration -->
+                                <img src="https://crushingit.tech/hackathon-assets/name-store.png" alt="Name your store Illustration">
+                                <div class="fade-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Single Configuration Step -->
+                    <div class="config-step ">
+                        <div class="step-details">
+                            <div class="step-header">
+                                <!-- State Buttons -->
+                                <div class="btn-icon-holder">
+                                    <button class="step-state" role="checkbox" aria-checked="false" aria-label="Toggle Set up a payment provider">
+                                        <div aria-hidden="true" class="default"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                                            <circle cx="16" cy="16" r="12" stroke="#BABABA" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28" fill="none">
+                                            <path
+                                                d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                                stroke="#1C181D"
+                                                stroke-width="2.5"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                            />
+                                        </svg></div>
+                                        <div  aria-hidden="true" class="loading-backwards"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 28 28" fill="none">
+                                        <path
+                                            d="M26 14C26 16.3734 25.2962 18.6935 23.9776 20.6668C22.6591 22.6402 20.7849 24.1783 18.5922 25.0866C16.3995 25.9948 13.9867 26.2324 11.6589 25.7694C9.33114 25.3064 7.19295 24.1635 5.51472 22.4853C3.83649 20.8071 2.6936 18.6689 2.23058 16.3411C1.76755 14.0133 2.00519 11.6005 2.91345 9.4078C3.8217 7.21509 5.35977 5.34094 7.33316 4.02236C9.30655 2.70379 11.6266 2 14 2"
+                                            stroke="#1C181D"
+                                            stroke-width="2.5"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                        </svg></div>
+                                        <div aria-hidden="true" class="selected"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" fill="#303030"></circle>
+                                        <path
+                                            d="M17.2738 8.52629C17.6643 8.91682 17.6643 9.54998 17.2738 9.94051L11.4405 15.7738C11.05 16.1644 10.4168 16.1644 10.0263 15.7738L7.3596 13.1072C6.96908 12.7166 6.96908 12.0835 7.3596 11.693C7.75013 11.3024 8.38329 11.3024 8.77382 11.693L10.7334 13.6525L15.8596 8.52629C16.2501 8.13577 16.8833 8.13577 17.2738 8.52629Z"
+                                            fill="#fff"
+                                        ></path>
+                                        </svg></div>
+                                    </button>
+                                </div>
+                                <!-- Title of the Configuration Step -->
+                                <div class="btn-title-holder">
+                                    <button class="step-title" aria-label="Dropdown set up a payment provider accordion">Set up a payment provider</button>
+                                </div>
+                            </div>
+                            <div class="step-content">
+                                <div>
+                                    <!-- Step Description -->
+                                    <p>Choose a payment provider to start accepting payments. you'll need to create an account with the payment provider and set it up with your Shopify store. <a href="https://help.shopify.com/en/manual/payments" target="_blank" aria-label="learn more about choosing the right payment provider.">Learn more </a></p>
+                                    <div class="step-actions">
+                                        <!-- Action Button -->
+                                        <div class="btn-holder">
+                                            <button class="btn-dark">Set up payment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="step-illustration">
+                                    <!-- Step Illustration -->
+                                    <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="Set up a payment provider Illustration">
+                                    <div class="fade-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div>
-                <img src="https://crushingit.tech/hackathon-assets/payment.png" alt="" />
-              </div>
-            
         </div>
-    </div>
-</div>
+  
+    </main>
 
 
 
-</section>
+
+
+
+    
+  
 
   <script src="./app.js"></script>
   </body>
